@@ -25,10 +25,15 @@ default_message = "You stand still, unsure what to do. The forest swallows you."
 # -----------------------------
 # Game Logic (unchanged API)
 # -----------------------------
+def step(choice: str, events):
+    random_event = random.choice(events)
 
-=======
-default_message = "You stand still, unsure what to do. The forest swallows you."
-
+    if choice == "left":
+        return left_path(random_event)
+    elif choice == "right":
+        return right_path(random_event)
+    else:
+        return default_message
 >>>>>>> main
 def step(choice: str, events):
     random_event = random.choice(events)
