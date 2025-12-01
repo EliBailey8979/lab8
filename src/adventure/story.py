@@ -73,7 +73,7 @@ if __name__ == "__main__":
     display_intro()
 
     while True:
-        choice = console.input("[prompt]Which direction do you choose? (left/right/exit): [/prompt]").strip().lower()
+        choice = console.input("[prompt][bold]Which direction do you choose? [/bold](left/right/exit): [/prompt]").strip().lower()
 
         if choice == "exit":
             console.print("\nFarewell, traveler.", style="intro")
