@@ -4,7 +4,6 @@ from rich.console import Console
 from rich.text import Text
 from rich.theme import Theme
 
-
 # -----------------------------
 # Rich Theme (consistent colors)
 # -----------------------------
@@ -18,10 +17,19 @@ game_theme = Theme({
 
 console = Console(theme=game_theme)
 
+# -----------------------------
+# Main branch default message
+# -----------------------------
+default_message = "You stand still, unsure what to do. The forest swallows you."
 
 # -----------------------------
 # Game Logic (unchanged API)
 # -----------------------------
+
+=======
+default_message = "You stand still, unsure what to do. The forest swallows you."
+
+>>>>>>> main
 def step(choice: str, events):
     random_event = random.choice(events)
 
@@ -30,7 +38,7 @@ def step(choice: str, events):
     elif choice == "right":
         return right_path(random_event)
     else:
-        return "You stand still, unsure what to do. The forest swallows you."
+        return default_message
 
 
 def left_path(event):
